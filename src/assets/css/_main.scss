@@ -1,0 +1,45 @@
+.center-content {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cg {
+    position: absolute;
+    bottom: var(--space-4);
+    right: var(--space-4);
+
+    svg {
+        width: var(--space-8);
+        height: var(--space-8);
+    }
+}
+
+.page {
+    display: grid;
+    grid-template-columns: 16rem 1fr;
+    min-height: 100vh;
+}
+
+.page main .container {
+    --container-width: 70ch;
+}
+
+.page main h2,
+.page main h3,
+.page main h4 {
+    --flow-space: var(--space-10);
+}
+
+.sidebar {
+    background-color: var(--color-grey-100);
+    border-bottom: var(--space-20) solid white;
+    border-bottom-right-radius: var(--radius-full);
+    padding: var(--space-4) var(--space-6);
+}
