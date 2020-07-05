@@ -11,8 +11,16 @@ module.exports = (config) => {
         config.addPassthroughCopy(item);
     });
 
-    // Watch config for changes
-    config.addWatchTarget('site.yml');
+    // Setup Markdown config
+    let md = require('markdown-it');
+    let mdPrism = require('markdown-it-prism');
+    let options = { html: true };
+    config.setLibrary('md', md(options).use(mdPrism));
+
+    // Component Example
+    config.addFilter('example', function (input) {
+        return `<div class="component-example">${input}</div>`;
+    });
 
     // Handle 404 locally
     config.setBrowserSyncConfig({

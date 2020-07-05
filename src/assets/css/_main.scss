@@ -11,7 +11,7 @@
 }
 
 .cg {
-    position: absolute;
+    position: fixed;
     bottom: var(--space-4);
     right: var(--space-4);
 
@@ -42,4 +42,29 @@
     border-bottom: var(--space-20) solid white;
     border-bottom-right-radius: var(--radius-full);
     padding: var(--space-4) var(--space-6);
+}
+
+.component-example {
+    background-color: var(--color-grey-100);
+    border: var(--space-half) dashed var(--color-grey-300);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    position: relative;
+
+    &:after {
+        border-radius: var(--radius-full);
+        background-color: var(--color-blue-500);
+        color: var(--color-blue-100);
+        font-size: var(--text-sm);
+        font-weight: var(--weight-bold);
+        text-transform: uppercase;
+        letter-spacing: var(--tracking-wide);
+        display: block;
+        content: 'Preview';
+        padding: var(--space-half) var(--space-2);
+        position: absolute;
+        top: calc(var(--space-3) * -1);
+        right: calc(var(--space-3) * -1);
+        box-shadow: var(--shadow-base);
+    }
 }

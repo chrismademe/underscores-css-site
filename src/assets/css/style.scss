@@ -8,13 +8,14 @@
 );
 
 /* Import Components you need */
-@use 'components/alert';
+@use 'components/auto-grid';
 @use 'components/button';
 @use 'components/cluster';
 @use 'components/container';
 @use 'components/flow';
 
 /* Your project CSS */
+@use 'prism';
 @use 'error-page';
 @use 'main';
 
