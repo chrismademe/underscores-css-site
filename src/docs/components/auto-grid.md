@@ -11,10 +11,10 @@ Use Auto Grid to layout flexible grids, such as a Gallery, for example.
 
 ```html
 <div class="auto-grid">
-    <!-- These items will automatically create a grid -->
-    <img src="/images/photo.jpg" alt="" />
-    <img src="/images/photo.jpg" alt="" />
-    <img src="/images/photo.jpg" alt="" />
+	<!-- These items will automatically create a grid -->
+	<img src="/images/photo.jpg" alt="" />
+	<img src="/images/photo.jpg" alt="" />
+	<img src="/images/photo.jpg" alt="" />
 </div>
 ```
 
@@ -26,3 +26,14 @@ Custom Properties for this component are shown below with their default values.
 
 -   `--min-width: 10rem` Minimum width for grid items.
 -   `--gap: var(--space-4)` Gap between grid items.
+
+Modify properties either inline, or in your CSS.
+
+```html
+<div class="auto-grid" style="--gap: var(--space-8)">
+	<!-- These items will automatically create a grid -->
+	<img src="/images/photo.jpg" alt="" />
+	<img src="/images/photo.jpg" alt="" />
+	<img src="/images/photo.jpg" alt="" />
+</div>
+```
