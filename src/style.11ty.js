@@ -9,20 +9,19 @@ const cleanCSS = require('clean-css');
 const siteConfig = require('./_data/site');
 
 module.exports = class {
-    data() {
-        return {
-            permalink: 'assets/css/style.css',
-            eleventyExcludeFromCollections: true,
-        };
-    }
+	data() {
+		return {
+			permalink: 'assets/css/style.css',
+			eleventyExcludeFromCollections: true
+		};
+	}
 
-    // After
-    async render() {
-        const { css } = sass.renderSync({
-            file: path.join(__dirname, '/assets/css/style.scss'),
-            ...(siteConfig.sassOptions || {}),
-        });
+	async render() {
+		const { css } = sass.renderSync({
+			file: path.join(__dirname, '/assets/css/style.scss'),
+			...(siteConfig.sassOptions || {})
+		});
 
-        return new cleanCSS({}).minify(css.toString()).styles;
-    }
+		return new cleanCSS({}).minify(css.toString()).styles;
+	}
 };
