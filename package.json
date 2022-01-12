@@ -18,7 +18,7 @@
         "@11ty/eleventy-navigation": "^0.1.5",
         "clean-css": "^4.2.3",
         "cypress": "^3.8.0",
-        "markdown-it": "^11.0.0",
+        "markdown-it": "^12.3.2",
         "markdown-it-prism": "^2.0.5",
         "node-sass-promise": "^1.0.0",
         "node-yaml": "^4.0.1",
